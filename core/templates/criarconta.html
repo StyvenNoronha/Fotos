@@ -1,18 +1,25 @@
 {% extends "base.html" %}
     {% block titulo %}
-    home
+    Criar conta 
     {% endblock titulo %}
     {% block body %}
         <h1>Sites de fotos</h1>
+        <h2>Criação de conta do site de foto</h2>
         <form method="POST">
         {{form.csrf_token}}
             
             {{form.email.label}}
             {{form.email}}
-
+            <br>
+            {{form.username.label}}
+            {{form.username}}
+            <br>
             {{form.senha.label}}
             {{form.senha}}
-
+            <br>
+            {{form.confirmacao_senha.label}}
+            {{form.confirmacao_senha}}
+            <br>
             {{form.botao_confirmacao}}
 
 
