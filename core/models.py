@@ -11,7 +11,7 @@ class Usuario(db.Model, UserMixin):
     username = db.Column(db.String, nullable=False)
     email = db.Column(db.String, nullable=False, unique=True)
     senha = db.Column(db.String, nullable=False)
-    fotos = db.relationship('Foto', backref="usuario",lazy=True)
+    fotos = db.relationship('Fotos', backref="usuario",lazy=True)
     
 class Fotos(db.Model):
     id = db.Column(db.Integer, primary_key=True)
